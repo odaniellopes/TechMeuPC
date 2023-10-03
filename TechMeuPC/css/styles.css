@@ -1,0 +1,237 @@
+/*Estilo geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Para que os inputs não exedam o tamanho*/
+    font-family: "Roboto";
+    text-decoration: none;
+}
+
+body {
+    display: flex; /*alinha ao lado os objetos*/
+    flex-wrap: wrap; /*quebra a linha responsivamente*/
+}
+
+
+/*Estilo container de apresentação*/
+#about-container {
+    flex: 1; /*Esse container esquerdo será um pouco maior que o outro uns 40%*/
+    padding: 2rem 4rem; /*rem é unidade de medida | ele criou espaços nas laterais e em cima e em baixo*/
+}
+
+#logo {   /*titulo e logo*/
+    display: flex;
+    align-items: center; /*alinhados ao centro*/
+    font-size: 0.8rem;
+    margin-bottom: 1rem; /*Afastando do conteúdo*/
+}
+
+#logo img {
+    height: 80px;
+    margin-right: 0.5rem;
+}
+
+#manutencao {
+    text-transform: uppercase;  /*maiusculo*/
+    color: turquoise;
+    font-weight: bold;  /*Negrito*/
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+#about-container h2 {
+    font-size: 2.4rem;
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+#description {
+    max-width: 500px;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+#about-container h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#serv-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;  /*espaçamento de cards com essa regra que é de flexbox */
+}
+
+.serv-card {
+    border: 2px solid #ccc;
+    padding: 0.4rem;
+    width: 180px;
+    text-align: center;
+}
+
+.serv-card img {
+    width: 155px;  /*arredondando imagens*/
+    margin-bottom: 1rem;
+    border-radius: 5%;
+}
+
+.name-serv {
+    font-weight:bold;
+    color:rgb(77, 77, 77);
+    font-size: 0.9rem;
+}
+
+
+
+/*Estilos do orçamento*/
+#order-container {
+    flex: 1;
+    background-image: url("../img/fundocontato.png");
+    background-size: cover;   /*Mostrando a imagem completa*/
+    color: #fff;
+}
+
+#order-inner {
+    margin: 2rem;
+    padding: 1.4rem;
+    border: 2px solid #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#order-inner h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+#order-inner p {
+    margin-bottom: 1rem;
+    padding-bottom: 3rem;
+}
+
+#perfil {
+    display: flex;
+    flex-wrap: wrap;
+    width: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5.5rem;
+    
+}
+
+#perfil h4 {
+    font-size: 1.6rem;
+}
+
+#perfil img {
+    width: 270px;
+    border-radius: 50%;   /*arredondando imagens*/
+    margin-bottom: 0.2rem;
+}
+
+.name-perfil {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+}
+
+#contatos {
+    text-align: left;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    margin-left: 2rem;
+}
+
+#contatos h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+#contatos ul {
+    list-style-position: inside;
+}
+
+#contatos li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    transition: 0.4s;
+}
+
+#contatos li:hover {
+    color: blue;
+    font-weight: bolder;
+}
+
+#contatos img {
+    width: 35px;
+    align-items: left;
+    margin-right: 0.5rem;
+    border-radius:0%;
+}
+
+/*Responsiviade*/
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+    }
+
+#about-container h2 {
+    font-size: 1.5rem;
+    }
+
+#about-container h4 {
+    font-size: 1.1rem;
+    }    
+
+.serv-card {
+    padding: 0.4rem;
+    width: 250px;
+    text-align: center;
+}    
+
+.serv-card img {
+    width: 210px;
+    padding-top: 0.3rem;
+    height: 160px;
+}
+
+.name-serv {
+    font-size: 1.1rem;
+}
+}
+
+@media (width: 768px) {
+
+#about-container h2 {
+    font-size: 1.5rem;
+    }
+
+#about-container h4 {
+    font-size: 1.1rem;
+    }    
+
+.serv-card {
+    padding: 0rem;
+    width: 121px;
+    text-align: center;
+}    
+
+.serv-card img {
+    width: 95px;
+    padding-top: 0.3rem;
+    border-radius: 5%;
+}
+
+.name-serv {
+    font-size: 1.1rem;
+}
+
+#order-inner {
+    padding-bottom: 2.4rem;
+}
+}
